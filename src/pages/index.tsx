@@ -1,13 +1,5 @@
-import Link from 'next/link'
-import Layout from '@/components/layout/Layout'
-//import { Children } from 'react'
-
-const Home = () => {
-    return (
-        <div>
-            <Layout children={undefined} />
-        </div>
-    )
+const HomePage = () => {
+    return <div>Home</div>
 }
 
-export default Home
+export default HomePage

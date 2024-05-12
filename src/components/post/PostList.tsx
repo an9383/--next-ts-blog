@@ -1,13 +1,12 @@
-import React from 'react'
-import { posts } from '@/data/posts'
-import PostItem from '@/components/post/PostItem'
+import PostItem from './PostItem'
 
 const PostList = () => {
     return (
         <div>
-            {posts.map((post) => (
-                <PostItem key={post.id} post={post} />
-            ))}
+            <PostItem />
+            <PostItem />
+            <PostItem />
+            <PostItem />
         </div>
     )
 }
