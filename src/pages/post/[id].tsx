@@ -1,6 +1,6 @@
 import PostDetail from '@/components/post/PostDetail'
 import { posts } from '@/data/posts'
-import { Post } from '@/types/types'
+import { type Post } from '@/types/types'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 interface PostProps {
