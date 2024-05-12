@@ -1,12 +1,12 @@
+import { posts } from '@/data/posts'
 import PostItem from './PostItem'
 
 const PostList = () => {
     return (
         <div>
-            <PostItem />
-            <PostItem />
-            <PostItem />
-            <PostItem />
+            {posts.map((post) => (
+                <PostItem key={post.id} post={post} />
+            ))}
         </div>
     )
 }

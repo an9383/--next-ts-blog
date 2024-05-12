@@ -1,18 +1,26 @@
-import React from 'react'
+import { Post } from '@/types/types'
+import Link from 'next/link'
+import styles from '@/styles/Post.module.css'
 
-const PostItem = () => {
+interface PostProps {
+    post: Post
+}
+
+const PostItem = ({ post }: PostProps) => {
     return (
-        <div>
-            <h2>블로그를 쓸거야... 하루에 한개씩 쓸거야</h2>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolor soluta in. Molestias placeat iusto
-                iste beatae voluptates! Nihil illo dolores quidem cumque eius, quam ad in obcaecati dolore deleniti!
-            </p>
-            <div>
-                <span>react</span>
-                <span>nextjs</span>
-            </div>
-            <div>2024.05.12</div>
+        <div className={styles.post}>
+            <h2 className={styles.postTitle}>
+                <Link href={`/post/${post.id}`}>{post.title}</Link>
+            </h2>
+            <p className={styles.postContent}>{post.content}</p>
+            <ul className={styles.postTags}>
+                {/* post.tags map() 돌려서 출력 */}
+                {/* 태그가 있을 경우에만 map() 돌림 */}
+                {post.tags?.map((tag, index) => (
+                    <li key={index}>{tag}</li>
+                ))}
+            </ul>
+            <div className={styles.postDate}>{post.date}</div>
         </div>
     )
 }
