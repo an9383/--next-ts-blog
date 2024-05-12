@@ -1,13 +1,26 @@
-import PostItem from '@/components/post/PostItem'
-import PostList from '@/components/post/PostList'
-import React from 'react'
+// import PostItem from '@/components/post/PostItem'
+// import PostList from '@/components/post/PostList'
+// import React from 'react'
 
-const PostPage = () => {
+// const PostPage = () => {
+//     return (
+//         <div>
+//             <PostList />
+//         </div>
+//     )
+// }
+
+// export default PostPage
+
+import PostsList from '@/components/post/PostList'
+
+const PostsPage: React.FC = () => {
     return (
         <div>
-            <PostList />
+            <h1>Posts</h1>
+            <PostsList />
         </div>
     )
 }
 
-export default PostPage
+export default PostsPage
